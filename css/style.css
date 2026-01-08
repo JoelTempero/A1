@@ -1147,3 +1147,108 @@ a:hover {
     justify-content: center;
   }
 }
+
+/* ===== Video Lightbox ===== */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: rgba(74, 124, 89, 0.9);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.play-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent white;
+}
+
+.video-card:hover .play-button {
+  background: rgba(74, 124, 89, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-thumbnail img {
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.video-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-lightbox.active {
+  display: flex;
+}
+
+.video-lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.video-lightbox__content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.video-lightbox__close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-lightbox__close:hover {
+  opacity: 0.7;
+}
+
+.video-lightbox__wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: #000;
+}
+
+.video-lightbox__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

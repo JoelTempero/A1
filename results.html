@@ -205,25 +205,28 @@
         </div>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-lg);">
-          <div class="card">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md);">
-              <iframe src="https://www.youtube.com/embed/X_nkpMVM7Ks" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="card video-card" data-video="https://www.youtube.com/embed/X_nkpMVM7Ks?autoplay=1" style="cursor: pointer;">
+            <div class="video-thumbnail" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md); background: #000;">
+              <img src="https://img.youtube.com/vi/X_nkpMVM7Ks/hqdefault.jpg" alt="Vanessa H testimonial" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%);">
+              <div class="play-button"></div>
             </div>
             <h3 class="card__title">Vanessa H - A1 Parent</h3>
             <p class="card__text">Hear how the Arrowsmith Program transformed Vanessa's son's confidence and academic results.</p>
           </div>
           
-          <div class="card">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md);">
-              <iframe src="https://player.vimeo.com/video/358436410" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <div class="card video-card" data-video="https://player.vimeo.com/video/358436410?autoplay=1" style="cursor: pointer;">
+            <div class="video-thumbnail" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md); background: #000;">
+              <img src="https://vumbnail.com/358436410.jpg" alt="Tracey D testimonial" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%);">
+              <div class="play-button"></div>
             </div>
             <h3 class="card__title">Tracey D - A1 Parent</h3>
             <p class="card__text">Tracey shares the transformation she's witnessed in her child through the program.</p>
           </div>
           
-          <div class="card">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md);">
-              <iframe src="https://player.vimeo.com/video/484991106" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <div class="card video-card" data-video="https://player.vimeo.com/video/484991106?autoplay=1" style="cursor: pointer;">
+            <div class="video-thumbnail" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-bottom: var(--space-md); background: #000;">
+              <img src="https://vumbnail.com/484991106.jpg" alt="Toby H testimonial" style="position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%);">
+              <div class="play-button"></div>
             </div>
             <h3 class="card__title">Toby H - A1 Student</h3>
             <p class="card__text">Toby shares his personal experience and how Arrowsmith changed his approach to learning.</p>
@@ -269,6 +272,16 @@
         <a href="enrolment.html" class="btn btn--primary btn--lg">Book Free Consultation</a>
       </div>
     </section>
+  <!-- Video Lightbox -->
+    <div id="video-lightbox" class="video-lightbox">
+      <div class="video-lightbox__overlay"></div>
+      <div class="video-lightbox__content">
+        <button class="video-lightbox__close" aria-label="Close video">&times;</button>
+        <div class="video-lightbox__wrapper">
+          <iframe id="lightbox-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </main>
   
   <!-- Footer -->
