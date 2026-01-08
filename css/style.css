@@ -234,6 +234,11 @@ a:hover {
   gap: var(--space-sm);
 }
 
+.header__logo-img {
+  height: 48px;
+  width: auto;
+}
+
 .header__logo-icon {
   width: 48px;
   height: 48px;
@@ -841,6 +846,12 @@ a:hover {
   align-items: center;
   gap: var(--space-sm);
   margin-bottom: var(--space-md);
+}
+
+.footer__logo-img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer__logo-icon {
